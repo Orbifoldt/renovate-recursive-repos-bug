@@ -13,14 +13,15 @@
     <maven.compiler.target>17</maven.compiler.target>
 
     <url.repo.base>https://my.repo.com</url.repo.base>
-    <url.repo>${url.repo.base}/content/repositories</url.repo>
+    <url.repo.releases>${url.repo.base}/content/repositories/java-releases/</url.repo.releases>
+
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.apache.tika</groupId>
       <artifactId>tika-core</artifactId>
-      <version>1.20</version>
+      <version>1.20</version> <!-- outdated -->
     </dependency>
   </dependencies>
 
@@ -37,7 +38,7 @@
     <repository>
       <id>repo-releases</id>
       <layout>default</layout>
-      <url>${url.repo}/java-releases/</url>
+      <url>${url.repo.releases}</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
